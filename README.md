@@ -1,7 +1,12 @@
 # 🚀  Portfolio
 
-<div align="center">
+## How to Setup 
+## Clone the Repository
 
+```bash
+git clone https://github.com/Txwariaditya/Portfolio-.git
+cd Portfolio-
+```
 
 
 **A clean, responsive personal portfolio website built with pure HTML, CSS & JavaScript.**
@@ -74,12 +79,7 @@ CGPA: 8.0 (1st Year) · Currently in 2nd Year
 
 ---
 
-## 🏅 Certifications
 
-- **Deloitte — Data Analytics** (Virtual Internship Program)
-  Data cleaning, analysis, visual storytelling, and real-world analytics workflows
-
----
 
 ## 📬 Contact
 
