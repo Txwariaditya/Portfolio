@@ -9,7 +9,8 @@ cd Portfolio-
 ```
 
 
-**A clean, responsive personal portfolio website built with pure HTML, CSS & JavaScript.**
+**A clean, re
+sponsive personal portfolio website built with pure HTML, CSS & JavaScript.**
 
 </div>
 

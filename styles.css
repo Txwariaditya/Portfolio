@@ -8,10 +8,11 @@
     --primary-color: #667eea;
     --secondary-color: #764ba2;
     --accent-color: #f093fb;
-    --text-dark: #2d3748;
-    --text-light: #718096;
-    --bg-light: #f7fafc;
-    --bg-white: #ffffff;
+    --text-main: #2d3748;
+    --text-muted: #718096;
+    --bg-main: #f7fafc;
+    --bg-card: #ffffff;
+    --bg-nav: rgba(255, 255, 255, 0.95);
     --border-color: #e2e8f0;
     --success-color: #48bb78;
     --warning-color: #ed8936;
@@ -20,15 +21,27 @@
     --transition: all 0.3s ease;
 }
 
+[data-theme="dark"] {
+    --text-main: #f7fafc;
+    --text-muted: #a0aec0;
+    --bg-main: #1a202c;
+    --bg-card: #2d3748;
+    --bg-nav: rgba(26, 32, 44, 0.95);
+    --border-color: #4a5568;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-dark);
-    background-color: var(--bg-light);
+    color: var(--text-main);
+    background-color: var(--bg-main);
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -43,10 +56,20 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: var(--bg-nav);
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     z-index: 1000;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: var(--bg-nav);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .navbar.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav-wrapper {
@@ -74,11 +97,12 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--text-dark);
+    color: var(--text-main);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
@@ -104,6 +128,24 @@ body {
     width: 100%;
 }
 
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -116,7 +158,7 @@ body {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--text-dark);
+    background: var(--text-main);
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -179,14 +221,14 @@ body {
 
 .hero-subtitle {
     font-size: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-muted);
     margin-bottom: 1rem;
     animation: slideUp 0.8s ease 0.2s backwards;
 }
 
 .hero-description {
     font-size: 1.1rem;
-    color: var(--text-light);
+    color: var(--text-muted);
     max-width: 600px;
     margin: 1.5rem auto;
     animation: slideUp 0.8s ease 0.4s backwards;
@@ -259,7 +301,7 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: white;
+    background: var(--bg-card);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,7 +326,7 @@ section {
     font-size: 2.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--text-dark);
+    color: var(--text-main);
     font-weight: 700;
     position: relative;
     display: inline-block;
@@ -305,7 +347,7 @@ section {
 
 /* About Section */
 .about {
-    background: white;
+    background: var(--bg-card);
 }
 
 .about-content {
@@ -317,7 +359,7 @@ section {
 
 .about-text p {
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-muted);
     line-height: 1.8;
 }
 
@@ -352,7 +394,7 @@ section {
 }
 
 .stat-card p {
-    color: var(--text-light);
+    color: var(--text-muted);
 }
 
 /* Skills Section */
@@ -367,7 +409,7 @@ section {
 }
 
 .skill-category {
-    background: white;
+    background: var(--bg-card);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -385,7 +427,7 @@ section {
     gap: 0.8rem;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 .skill-category i {
@@ -417,7 +459,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background: white;
+    background: var(--bg-card);
 }
 
 .projects-grid {
@@ -427,7 +469,7 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 10px;
     overflow: hidden;
@@ -451,7 +493,7 @@ section {
 
 .project-header h3 {
     font-size: 1.3rem;
-    color: var(--text-dark);
+    color: var(--text-main);
     margin: 0;
 }
 
@@ -489,7 +531,7 @@ section {
 
 .project-description {
     padding: 0 2rem 2rem;
-    color: var(--text-light);
+    color: var(--text-muted);
 }
 
 .project-description p {
@@ -556,7 +598,7 @@ section {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: white;
+    background: var(--bg-card);
     border: 3px solid var(--primary-color);
     position: relative;
     top: 20px;
@@ -565,14 +607,14 @@ section {
 
 .education-content {
     width: calc(50% - 2rem);
-    background: white;
+    background: var(--bg-card);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .education-content h3 {
-    color: var(--text-dark);
+    color: var(--text-main);
     margin-bottom: 0.5rem;
 }
 
@@ -583,19 +625,19 @@ section {
 }
 
 .education-period {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.9rem;
     margin-bottom: 0.8rem;
 }
 
 .education-detail {
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.9rem;
 }
 
 /* Certifications Section */
 .certifications {
-    background: white;
+    background: var(--bg-card);
 }
 
 .certifications-grid {
@@ -628,11 +670,11 @@ section {
 .certification-card h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 .cert-source {
-    color: var(--text-light);
+    color: var(--text-muted);
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
 }
@@ -641,7 +683,7 @@ section {
     list-style: none;
     text-align: left;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-muted);
 }
 
 .cert-details li {
@@ -685,11 +727,11 @@ section {
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 .contact-info > p {
-    color: var(--text-light);
+    color: var(--text-muted);
     margin-bottom: 2rem;
     line-height: 1.8;
 }
@@ -714,7 +756,7 @@ section {
 
 .contact-label {
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-main);
     margin-bottom: 0.3rem;
 }
 
@@ -738,7 +780,7 @@ section {
     align-items: center;
     gap: 0.5rem;
     padding: 0.8rem 1.5rem;
-    background: white;
+    background: var(--bg-card);
     color: var(--primary-color);
     text-decoration: none;
     border-radius: 50px;
@@ -767,7 +809,7 @@ section {
 .form-group label {
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--text-dark);
+    color: var(--text-main);
 }
 
 .form-group input,
@@ -778,7 +820,8 @@ section {
     font-family: inherit;
     font-size: 1rem;
     transition: var(--transition);
-    background: white;
+    background: var(--bg-card);
+    color: var(--text-main);
 }
 
 .form-group input:focus,
@@ -790,10 +833,11 @@ section {
 
 /* Footer */
 .footer {
-    background: var(--text-dark);
-    color: white;
+    background: var(--bg-nav);
+    color: var(--text-main);
     padding: 2rem 0;
     text-align: center;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
@@ -823,12 +867,13 @@ section {
         left: -100%;
         top: 60px;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--bg-card);
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         gap: 0;
+        padding: 2rem 0;
     }
 
     .nav-menu.active {
@@ -838,6 +883,10 @@ section {
     .nav-menu li {
         padding: 1rem 0;
         border-bottom: 1px solid var(--border-color);
+    }
+
+    .theme-toggle-btn {
+        margin: 1rem 0;
     }
 
     .hero-title {
