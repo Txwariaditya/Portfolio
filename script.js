@@ -1,15 +1,16 @@
+// Force dark theme as default
+document.documentElement.setAttribute('data-theme', 'dark');
+
 // Theme Toggle
 const themeToggle = document.getElementById('themeToggle');
-const themeIcon = themeToggle.querySelector('i');
+const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
 
-// Check for saved theme
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme) {
+if (themeToggle && themeIcon) {
+    // Check for saved theme
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
-}
 
-if (themeToggle) {
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -21,12 +22,14 @@ if (themeToggle) {
 }
 
 function updateThemeIcon(theme) {
-    if (theme === 'dark') {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-    } else {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+    if (themeIcon) {
+        if (theme === 'dark') {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
     }
 }
 
@@ -102,7 +105,7 @@ if (contactForm) {
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
 
-        const mailtoLink = `mailto:adarsh2408.ak@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+        const mailtoLink = `mailto:txwariaditya@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
         window.location.href = mailtoLink;
         contactForm.reset();
     });
@@ -119,7 +122,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Scroll animation
+// Scroll animation (simple fade-in)
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -129,16 +132,14 @@ const observer = new IntersectionObserver(function(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
         }
     });
 }, observerOptions);
 
-document.querySelectorAll('.skill-category, .stat-card, .education-item, .experience-item, .experience-card').forEach(el => {
+document.querySelectorAll('.philosophy-card, .stat-card, .core-stack-box, .project-card, .note-card, .status-card-box').forEach(el => {
     el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.transition = 'opacity 0.4s ease-out';
     observer.observe(el);
 });
 
-console.log('Portfolio loaded successfully!');
+console.log('AdityaLab loaded successfully!');

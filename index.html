@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditya </title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AdityaLab — ML Systems Engineering Log</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=1.0.5">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -13,7 +16,7 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <a href="#home">Aditya</a>
+                    <a href="#home"><i class="fas fa-flask"></i> AdityaLab</a>
                 </div>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <span></span>
@@ -22,12 +25,10 @@
                 </button>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-                    <!-- <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li> -->
+                    <li><a href="#about" onclick="toggleMenu()">Journey</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Case Studies</a></li>
+                    <li><a href="#notes" onclick="toggleMenu()">Journal</a></li>
+                    <li><a href="#roadmap" onclick="toggleMenu()">Roadmap</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                     <li>
                         <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
@@ -44,13 +45,25 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Aditya Tiwari</h1>
-                <p class="hero-subtitle">AI/ML Engineer | Machine Learning | Cloud and Scaleable Systems</p>
+                <p class="hero-subtitle">Aspiring Machine Learning Engineer</p>
                 <p class="hero-description">
-                    I'm a passionate AI/ML Engineer with expertise in machine learning, data science, and cloud technologies. I specialize in building scalable ML systems and extracting insights from complex datasets. With a strong foundation in Python and hands-on experience in real-world projects, I'm dedicated to solving challenging problems and driving innovation in the field of artificial intelligence.
+                    Building machine learning systems and documenting the engineering journey.
                 </p>
+                
+                <div class="adityalab-intro">
+                    <h2 style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--primary-color); margin-top: 0; margin-bottom: 0.6rem; text-transform: uppercase; letter-spacing: 0.5px;">AdityaLab</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-main); font-weight: 500; font-style: italic; margin-bottom: 0.8rem;">
+                        "A living engineering notebook documenting my journey toward becoming a Machine Learning Engineer."
+                    </p>
+                    <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-muted); margin-bottom: 0;">
+                        Every project, engineering note, and case study reflects real work, real learning, and continuous improvement.
+                    </p>
+                </div>
+
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-book-open"></i> Explore Case Studies</a>
+                    <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-file-pdf"></i> View Resume</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
                 </div>
                 <div class="hero-socials">
                     <a href="https://linkedin.com/in/txwariaditya" target="_blank" rel="noopener noreferrer" title="LinkedIn">
@@ -67,271 +80,401 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Engineering Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="container">
+            <h2 class="section-title">Engineering Philosophy</h2>
+            <div class="philosophy-grid">
+                <!-- Card 1 -->
+                <div class="philosophy-card">
+                    <h3>Systems Thinking</h3>
+                    <p>Machine learning models are only one component of a larger software system. Focus on deployment, APIs, infrastructure, validation, and maintainability.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="philosophy-card">
+                    <h3>Reproducibility & Maintainability</h3>
+                    <p>Prioritize modular code, reproducible experiments, clean interfaces, validation, and maintainable pipelines.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="philosophy-card">
+                    <h3>Learning in Public</h3>
+                    <p>Document experiments, failures, trade-offs, and engineering decisions to create a transparent learning record.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Status Section -->
+    <section id="status" class="status-section">
+        <div class="container">
+            <div class="status-grid">
+                <!-- Currently Building -->
+                <div class="status-card-box">
+                    <h3><i class="fas fa-hammer"></i> Currently Building</h3>
+                    <p style="font-weight: 600; margin-bottom: 0.8rem; font-family: var(--font-sans); color: var(--text-main);">Loan Approval Prediction System</p>
+                    <ul style="list-style: none; padding: 0; font-size: 0.95rem; line-height: 1.8;">
+                        <li><strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Status:</strong> Building Terraform infrastructure</li>
+                        <li><strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Last Updated:</strong> July 2026</li>
+                        <li><strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Next Milestone:</strong> Containerize inference API</li>
+                    </ul>
+                </div>
+
+                <!-- Now Activity Log -->
+                <div class="status-card-box">
+                    <h3><i class="fas fa-clock"></i> Now</h3>
+                    <ul style="list-style: none; padding: 0; font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.5;">
+                        <li><span>📖</span> <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Reading:</strong> Designing ML Systems</li>
+                        <li><span>🧠</span> <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Learning:</strong> Terraform</li>
+                        <li><span>⚙️</span> <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Building:</strong> Loan Prediction API</li>
+                        <li><span>🎯</span> <strong style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Goal:</strong> Deploy on AWS Lambda</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Journey</h2>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a B.Tech student in Artificial Intelligence & Machine Learning at NIMS University, currently in my 2nd year. With a strong foundation in Python and data science, I'm passionate about solving real-world problems through machine learning and data analysis.
+                        My development as an engineer focuses on transitioning from mathematical concepts to production software execution.
                     </p>
-                    <p>
-                        My expertise spans <strong>exploratory data analysis</strong>, <strong>feature engineering</strong>, <strong>machine learning model development</strong>, and <strong>web scraping</strong>. I'm particularly interested in building end-to-end ML pipelines and extracting actionable insights from complex datasets.
-                    </p>
-                    <p>
-                        When I'm not coding, I enjoy exploring new ML algorithms, contributing to open-source projects, and continuously learning about emerging technologies in AI/ML.
-                    </p>
+                    
+                    <!-- Timeline of Growth -->
+                    <div class="growth-timeline">
+                        <div>
+                            <strong>Foundation</strong> <span style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); font-weight: normal; margin-left: 0.5rem;">(2024)</span>
+                            <p>Established foundational scripting in Python, learning data processing libraries (Pandas, NumPy) and basic statistical classification methods.</p>
+                        </div>
+                        <div>
+                            <strong>Machine Learning</strong> <span style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); font-weight: normal; margin-left: 0.5rem;">(2025)</span>
+                            <p>Learned scikit-learn pipeline engineering to prevent training-serving data leakage. Began exploring REST API architectures using FastAPI.</p>
+                        </div>
+                        <div>
+                            <strong>Systems Engineering</strong> <span style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); font-weight: normal; margin-left: 0.5rem;">(2026)</span>
+                            <p>Started a QA Internship at Panacee, translating validation concepts into structured test scripts. Currently learning Terraform configurations for serverless deployment environments.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <h3>8.0</h3>
-                        <p>CGPA (1st Year)</p>
+                        <h3>3rd Year</h3>
+                        <p>NIMS B.Tech AIML</p>
                     </div>
-                    <div class="stat-card">
-                        <h3>2+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>Python</h3>
-                        <p>Core Language</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">JSON</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-robot"></i> Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Supervised Learning</span>
-                        <span class="skill-tag">Classification</span>
-                        <span class="skill-tag">Regression</span>
-                        <span class="skill-tag">Model Evaluation</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-line"></i> Data Analysis</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">EDA</span>
-                        <span class="skill-tag">Data Cleaning</span>
-                        <span class="skill-tag">Feature Engineering</span>
-                        <span class="skill-tag">Statistical Analysis</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-palette"></i> Visualization</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Matplotlib</span>
-                        <span class="skill-tag">Seaborn</span>
-                        <span class="skill-tag">Dashboards</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Web Scraping</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Requests</span>
-                        <span class="skill-tag">BeautifulSoup</span>
-                        <span class="skill-tag">Selenium</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">AWS (EC2, S3)</span>
-                        <span class="skill-tag">Jupyter</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">VS Code</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Databases & Other</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">DBMS</span>
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">Algorithms</span>
+                    
+                    <!-- Core Stack Box -->
+                    <div class="core-stack-box">
+                        <h4 style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary-color); margin-bottom: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px;">Core Tech Stack</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Pandas</span>
+                            <span class="skill-tag">NumPy</span>
+                            <span class="skill-tag">scikit-learn</span>
+                            <span class="skill-tag">OpenCV</span>
+                            <span class="skill-tag">FastAPI</span>
+                            <span class="skill-tag">Pydantic</span>
+                            <span class="skill-tag">AWS (S3)</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Case Studies Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Mood Tracker</h3>
-                        <a href="https://github.com/Txwariaditya/MoodTrackerAI" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">ML</span>
-                    </div>
-                    <div class="project-description">
-                        <p><strong>End-to-end ML pipeline</strong> for detecting fraudulent bank transactions using supervised learning.</p>
-                        <ul>
-                            <li>Built automated wallpaper indexing and metadata management system</li>
-                            <li>Implemented duplicate detection and intelligent file organization</li>
-                            <li>Developed customizable wallpaper rotation and scheduling features</li>
-                            <li>Designed scalable architecture for managing large wallpaper collections</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Wallpaper Engine</h3>
-                        <a href="https://github.com/Txwariaditya/WallpaperEngine" target="_blank" rel="noopener noreferrer" class="project-link">
-                            <i class="fab fa-github"></i> View on GitHub
-                        </a>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">JSON</span>
-                        <span class="tech-tag">Graph Algorithms</span>
-                        <span class="tech-tag">Data Structures</span>
-                    </div>
-                    <div class="project-description">
-                        <p><strong>Python-based wallpaper management system</strong></p>
-                        <ul>
-                            <li>Built data cleaning pipeline to remove duplicates, filter inactive users, and resolve conflicts</li>
-                            <li>Developed "People You May Know" feature using mutual-friend graph traversal</li>
-                            <li>Implemented "Pages You Might Like" using collaborative filtering logic</li>
-                            <li>Designed modular functions scalable to massive datasets</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="education-timeline">
-                <div class="experience-item education-item">
-                    <div class="education-marker"></div>
-                    <div class="education-content">
-                        <h3>Intern</h3>
-                        <p class="education-school">Panacee</p>
-                        <p class="education-period">May 2026 - Present</p>
-                        <p class="education-detail">
-                            Working as a QA testing intern, responsible for testing and validating software applications to ensure they meet quality standards. Collaborating with the development team to identify and report bugs, and contributing to the overall improvement of the product's performance and user experience.
+            <h2 class="section-title">Case Studies</h2>
+            <p class="section-subtitle-description">
+                Interactive breakdowns of machine learning systems. Click on a case study header to expand detailed technical notes.
+            </p>
+            
+            <!-- Case Study 1 -->
+            <details class="project-card">
+                <summary>
+                    <div class="project-summary-header" style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%;">
+                        <div class="project-summary-title-wrapper" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-main);">Loan Approval Prediction System</h3>
+                            <span class="project-link" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary-color);">Explore Source →</span>
+                        </div>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; max-width: 100%;">
+                            A classification model and API designed to predict loan approval outcomes using applicant financial profiles.
                         </p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
+                            <span>Python • Pandas • scikit-learn • FastAPI • Pydantic</span>
+                            <span style="color: var(--border-color);">|</span>
+                            <span>Status: <strong style="color: var(--accent-color);">Active</strong></span>
+                        </div>
                     </div>
+                </summary>
+                <div class="case-study-content">
+                    <!-- Metadata Panel -->
+                    <div class="project-metadata-panel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.85rem 1rem; margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
+                        <div>
+                            <span class="meta-label">Status</span>
+                            <span class="meta-value" style="color: var(--accent-color); font-weight: 600;">Active Development</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Last Updated</span>
+                            <span class="meta-value" style="color: var(--text-main); font-weight: 600;">July 2026</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Repository</span>
+                            <a href="https://github.com/Txwariaditya/LoanApprovalSystem" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Explore Source →</a>
+                        </div>
+                        <div>
+                            <span class="meta-label">Demo</span>
+                            <span class="meta-value" style="color: var(--text-muted); font-weight: 600;">Coming Soon</span>
+                        </div>
+                    </div>
+
+                    <h4>01. Overview</h4>
+                    <p>A classification model and API designed to predict loan approval outcomes using applicant financial profiles.</p>
+
+                    <h4>02. Problem</h4>
+                    <p>Manual credit evaluation is slow and subjective. Automating classifications requires preprocessing numeric/categorical features and exposing predictions as a fast, type-safe API.</p>
+
+                    <h4>03. Approach</h4>
+                    <p>Created an end-to-end preprocessing and model pipeline with scikit-learn, validating inputs using Pydantic, and serving inference requests via a FastAPI web server.</p>
+
+                    <h4>04. System Design</h4>
+                    <div class="ascii-art">
+Client Request (JSON)
+   │
+   ▼
+FastAPI Gateway
+   │
+   ▼
+Pydantic Validation (Type Verification)
+   │
+   ▼
+scikit-learn Pipeline (Scaling/Encoding)
+   │
+   ▼
+Tabular Classifier Model
+   │
+   ▼
+JSON Classification Response</div>
+
+                    <h4>05. Engineering Decisions</h4>
+                    <p>Selected scikit-learn for training to leverage its native Pipeline interface. Chose Pydantic schema validation inside FastAPI to reject invalid client inputs at the API entry point.</p>
+
+                    <h4>06. Challenges</h4>
+                    <p>Data leakage between folds occurred during separate categorical and numerical preprocessing. Solved by encapsulation inside unified ColumnTransformer and Pipeline flows.</p>
+
+                    <h4>07. Lessons Learned</h4>
+                    <p><strong>Biggest Lesson (Model vs. System):</strong> Model accuracy wasn't the hardest problem. Building a reliable preprocessing pipeline and validating inputs correctly took significantly more engineering effort than training the model itself.</p>
+
+                    <h4>08. Future Improvements</h4>
+                    <p>Provisioning the FastAPI microservice to deploy automatically on AWS Lambda serverless endpoints using Terraform configurations.</p>
+
+                    <h4>09. Repository</h4>
+                    <p><a href="https://github.com/Txwariaditya/LoanApprovalSystem" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-mono); word-break: break-all;">https://github.com/Txwariaditya/LoanApprovalSystem</a></p>
+
+                    <h4>10. Live Demo</h4>
+                    <p style="color: var(--text-muted); font-style: italic;">Not available (Local REST prediction API only).</p>
+                </div>
+            </details>
+
+            <!-- Case Study 2 -->
+            <details class="project-card">
+                <summary>
+                    <div class="project-summary-header" style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%;">
+                        <div class="project-summary-title-wrapper" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                            <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-main);">C-Arm Medical Image Analysis Tools</h3>
+                            <span class="project-link" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary-color);">Explore Source →</span>
+                        </div>
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; max-width: 100%;">
+                            Scripting tools to process and verify visual output alignment and compute difference metrics across simulator C-Arm frames.
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
+                            <span>Python • OpenCV • NumPy • Git</span>
+                            <span style="color: var(--border-color);">|</span>
+                            <span>Status: <strong style="color: var(--success-color);">Completed</strong></span>
+                        </div>
+                    </div>
+                </summary>
+                <div class="case-study-content">
+                    <!-- Metadata Panel -->
+                    <div class="project-metadata-panel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.85rem 1rem; margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
+                        <div>
+                            <span class="meta-label">Status</span>
+                            <span class="meta-value" style="color: var(--success-color); font-weight: 600;">Completed</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Last Updated</span>
+                            <span class="meta-value" style="color: var(--text-main); font-weight: 600;">June 2026</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Repository</span>
+                            <a href="https://github.com/Txwariaditya/CArmImageAnalysis" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Explore Source →</a>
+                        </div>
+                        <div>
+                            <span class="meta-label">Demo</span>
+                            <span class="meta-value" style="color: var(--text-muted); font-weight: 600;">Not Available</span>
+                        </div>
+                    </div>
+
+                    <h4>01. Overview</h4>
+                    <p>Scripting tools to process and verify visual output alignment and compute difference metrics across simulator C-Arm frames.</p>
+
+                    <h4>02. Problem</h4>
+                    <p>Verifying visual consistency across medical simulator frames manually is inefficient. The tool needs to automate quality metric calculations between raw frames and baseline reference frames.</p>
+
+                    <h4>03. Approach</h4>
+                    <p>Built image loading, matrix alignment, and quality metric comparison modules using OpenCV and NumPy pixel matrix operations.</p>
+
+                    <h4>04. System Design</h4>
+                    <div class="ascii-art">
+Image Directory Path
+   │
+   ▼
+OpenCV Image Loader
+   │
+   ▼
+NumPy Matrix Alignment
+   │
+   ▼
+Mask HUD Overlay (Annotation Filter)
+   │
+   ▼
+MSE & PSNR Quality Computations
+   │
+   ▼
+Validation Reports Logger</div>
+
+                    <h4>05. Engineering Decisions</h4>
+                    <p>Utilized OpenCV and NumPy to perform fast matrix calculations directly on pixels, keeping execution runtime minimal without heavy dependencies.</p>
+
+                    <h4>06. Challenges</h4>
+                    <p>Simulator HUD overlay texts (timestamps, status logs) caused false alignment error signals. Mitigated by applying OpenCV threshold masks to isolate and evaluate only structural image regions.</p>
+
+                    <h4>07. Lessons Learned</h4>
+                    <p><strong>Biggest Lesson (Dirty Data):</strong> Real-world data is extremely dirty. Image verification is less about math optimization and more about proper masking and thresholding to filter out non-anatomical visual noise.</p>
+
+                    <h4>08. Future Improvements</h4>
+                    <p>Adding concurrent file processing loops and generating summary dashboards of simulator runs.</p>
+
+                    <h4>09. Repository</h4>
+                    <p><a href="https://github.com/Txwariaditya/CArmImageAnalysis" target="_blank" rel="noopener noreferrer" style="font-family: var(--font-mono); word-break: break-all;">https://github.com/Txwariaditya/CArmImageAnalysis</a></p>
+
+                    <h4>10. Live Demo</h4>
+                    <p style="color: var(--text-muted); font-style: italic;">Not available (CLI analysis script only).</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Engineering Journal Section -->
+    <section id="notes" class="skills">
+        <div class="container">
+            <h2 class="section-title">Engineering Journal</h2>
+            <p class="section-subtitle-description">
+                Learning in public: technical documentation logs detailing ML workflows, code investigations, and system architectures.
+            </p>
+            <div class="notes-grid">
+                <!-- Log 1 -->
+                <div class="note-card">
+                    <div class="note-meta">
+                        <span class="note-tag">scikit-learn</span>
+                        <span>July 2026</span>
+                    </div>
+                    <h3>Learning scikit-learn Pipelines</h3>
+                    <p>Documenting how to construct formal ML preprocessing pipelines. Bundling scaling, imputers, and encoders inside Pipeline and ColumnTransformer modules to enforce validation rules and prevent data leakage during training splits.</p>
+                </div>
+                <!-- Log 2 -->
+                <div class="note-card">
+                    <div class="note-meta">
+                        <span class="note-tag">API Design</span>
+                        <span>July 2026</span>
+                    </div>
+                    <h3>Understanding FastAPI and Pydantic validation</h3>
+                    <p>Building HTTP REST APIs for local model inference. Using FastAPI query endpoints and declaring Pydantic base schemas to validate input json data payloads, generating clean self-documenting OpenAPI endpoints automatically.</p>
+                </div>
+                <!-- Log 3 -->
+                <div class="note-card">
+                    <div class="note-meta">
+                        <span class="note-tag">Cloud</span>
+                        <span>July 2026</span>
+                    </div>
+                    <h3>Deploying AWS Lambda with Terraform</h3>
+                    <p>Investigating Infrastructure as Code (IaC) architectures. Writing basic Terraform scripts to define and automate AWS Lambda serverless functions, testing endpoints deployment and IAM permissions roles configuration.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
+    <!-- Learning Roadmap Section -->
+    <section id="roadmap" class="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="education-item">
-                    <div class="education-marker"></div>
-                    <div class="education-content">
-                        <h3>B.Tech in Artificial Intelligence & Machine Learning</h3>
-                        <p class="education-school">NIMS University, Jaipur</p>
-                        <p class="education-period">2024 - 2028 </p>
-                        <p class="education-detail"><strong>CGPA:</strong> 8.0 | Currently in 3rd Year</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-marker"></div>
-                    <div class="education-content">
-                        <h3>12th Grade - CBSE</h3>
-                        <p class="education-percentage"><strong>Score:</strong> 70%</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="education-marker"></div>
-                    <div class="education-content">
-                        <h3>10th Grade - CBSE</h3>
-                        <p class="education-percentage"><strong>Score:</strong> 80%</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <!-- <section id="certifications" class="certifications">
-        <div class="container">
-            <h2 class="section-title">Certifications & Achievements</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Deloitte - Data Analytics</h3>
-                    <p class="cert-source">Deloitte Virtual Internship Program</p>
-                    <ul class="cert-details">
-                        <li>Data cleaning, analysis, and visual storytelling</li>
-                        <li>Real-world analytics workflows from consulting engagements</li>
-                        <li>Hands-on exposure to professional analytics practices</li>
+            <h2 class="section-title">Learning Roadmap</h2>
+            <p class="section-subtitle-description">
+                My learning roadmap is driven by the skills required to build production-ready machine learning systems, progressing from software engineering foundations to cloud infrastructure and MLOps.
+            </p>
+            
+            <div class="roadmap-grid">
+                <div class="status-card-box">
+                    <h3><i class="fas fa-search"></i> Currently Exploring</h3>
+                    <ul style="line-height: 1.8; color: var(--text-muted);">
+                        <li>• Python programming</li>
+                        <li>• Tabular datasets (Pandas, NumPy)</li>
+                        <li>• scikit-learn modeling</li>
+                        <li>• FastAPI & Pydantic validation</li>
+                        <li>• Git version control</li>
                     </ul>
-                    <a href="#" class="view-cert">View Certificate</a>
+                </div>
+                
+                <div class="status-card-box">
+                    <h3><i class="fas fa-arrow-right"></i> Next</h3>
+                    <ul style="line-height: 1.8; color: var(--text-muted);">
+                        <li>• Terraform configurations</li>
+                        <li>• Containerization concepts</li>
+                        <li>• AWS Lambda setup</li>
+                    </ul>
+                </div>
+                
+                <div class="status-card-box">
+                    <h3><i class="fas fa-forward"></i> Future</h3>
+                    <ul style="line-height: 1.8; color: var(--text-muted);">
+                        <li>• AWS API Gateway setup</li>
+                        <li>• Basic CI/CD scripts</li>
+                        <li>• Data validation checks</li>
+                    </ul>
+                </div>
+                
+                <div class="status-card-box">
+                    <h3><i class="fas fa-compass"></i> Long-term</h3>
+                    <ul style="line-height: 1.8; color: var(--text-muted);">
+                        <li>• Model registries & tracking</li>
+                        <li>• Automated monitoring</li>
+                        <li>• Data versioning systems</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" style="border-top: 1px solid var(--border-color);">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <h2 class="section-title">Let's Build Something Together</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3>Let's Connect!</h3>
-                    <p>I'm open to internships, full-time opportunities, and collaborative projects in AI/ML, Data Science, and Software Engineering. Feel free to reach out!</p>
+                    <p>
+                        I'm always interested in discussing machine learning systems, software engineering, internships, and collaborative projects. Feel free to reach out through the contact form or connect with me directly.
+                    </p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
                                 <p class="contact-label">Phone</p>
-                                <a href="tel:+919958864941">+91 8797599640</a>
+                                <!-- <a href="tel:+919958864941"> -->+91 99588 64941</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -357,6 +500,9 @@
                         <a href="https://github.com/txwariaditya" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fab fa-github"></i> GitHub
                         </a>
+                        <a href="assets/resume.pdf" target="_blank" class="social-link">
+                            <i class="fas fa-file-pdf"></i> View Resume
+                        </a>
                     </div>
                 </div>
 
@@ -377,7 +523,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary">Get in Touch</button>
                 </form>
             </div>
         </div>
@@ -385,6 +531,20 @@
 
     <!-- Footer -->
     <footer class="footer">
+        <div class="container" style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-align: center;">
+                <h3 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--primary-color); margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">AdityaLab</h3>
+                <p style="max-width: 650px; color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">
+                    A living engineering notebook documenting my journey toward becoming a Machine Learning Engineer. Every project, engineering note, and case study reflects real work, real learning, and continuous improvement.
+                </p>
+                <p style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin: 0.4rem 0 0 0;">
+                    Built with HTML, CSS, JavaScript, and curiosity.
+                </p>
+                <p style="font-size: 0.75rem; color: var(--text-muted); margin: 0.2rem 0 0 0;">
+                    &copy; 2026 Aditya Tiwari
+                </p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
