@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=1.0.5">
+    <link rel="stylesheet" href="styles.css?v=1.0.7">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -62,7 +62,7 @@
 
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary"><i class="fas fa-book-open"></i> Explore Case Studies</a>
-                    <a href="assets/resume.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-file-pdf"></i> View Resume</a>
+                    <a href="resume.pdf" target="_blank" class="btn btn-secondary"><i class="fas fa-file-pdf"></i> View Resume</a>
                     <a href="#contact" class="btn btn-secondary"><i class="fas fa-paper-plane"></i> Get in Touch</a>
                 </div>
                 <div class="hero-socials">
@@ -196,39 +196,44 @@
             <!-- Case Study 1 -->
             <details class="project-card">
                 <summary>
-                    <div class="project-summary-header" style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%;">
-                        <div class="project-summary-title-wrapper" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                            <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-main);">Loan Approval Prediction System</h3>
-                            <span class="project-link" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary-color);">Explore Source →</span>
+                    <div class="project-summary-header">
+                        <div class="project-summary-title-wrapper">
+                            <h3>Loan Approval Prediction System</h3>
+                            <a href="https://github.com/Txwariaditya/LoanApprovalSystem" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation();">
+                                Explore Source →
+                            </a>
                         </div>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; max-width: 100%;">
-                            A classification model and API designed to predict loan approval outcomes using applicant financial profiles.
-                        </p>
-                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
-                            <span>Python • Pandas • scikit-learn • FastAPI • Pydantic</span>
-                            <span style="color: var(--border-color);">|</span>
-                            <span>Status: <strong style="color: var(--accent-color);">Active</strong></span>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Pydantic</span>
                         </div>
                     </div>
                 </summary>
                 <div class="case-study-content">
                     <!-- Metadata Panel -->
-                    <div class="project-metadata-panel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.85rem 1rem; margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
+                    <div class="project-metadata-panel">
                         <div>
                             <span class="meta-label">Status</span>
-                            <span class="meta-value" style="color: var(--accent-color); font-weight: 600;">Active Development</span>
+                            <span class="meta-value" style="color: var(--accent-color);">Active Development</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Role</span>
+                            <span class="meta-value">ML Engineer</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">4 Weeks</span>
                         </div>
                         <div>
                             <span class="meta-label">Last Updated</span>
-                            <span class="meta-value" style="color: var(--text-main); font-weight: 600;">July 2026</span>
+                            <span class="meta-value">July 2026</span>
                         </div>
                         <div>
                             <span class="meta-label">Repository</span>
-                            <a href="https://github.com/Txwariaditya/LoanApprovalSystem" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Explore Source →</a>
-                        </div>
-                        <div>
-                            <span class="meta-label">Demo</span>
-                            <span class="meta-value" style="color: var(--text-muted); font-weight: 600;">Coming Soon</span>
+                            <a href="https://github.com/Txwariaditya/LoanApprovalSystem" target="_blank" rel="noopener noreferrer">Explore Source →</a>
                         </div>
                     </div>
 
@@ -283,39 +288,43 @@ JSON Classification Response</div>
             <!-- Case Study 2 -->
             <details class="project-card">
                 <summary>
-                    <div class="project-summary-header" style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%;">
-                        <div class="project-summary-title-wrapper" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-                            <h3 style="margin: 0; font-size: 1.2rem; font-weight: 600; color: var(--text-main);">C-Arm Medical Image Analysis Tools</h3>
-                            <span class="project-link" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary-color);">Explore Source →</span>
+                    <div class="project-summary-header">
+                        <div class="project-summary-title-wrapper">
+                            <h3>C-Arm Medical Image Analysis Tools</h3>
+                            <a href="https://github.com/Txwariaditya/CArmImageAnalysis" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation();">
+                                Explore Source →
+                            </a>
                         </div>
-                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.4; max-width: 100%;">
-                            Scripting tools to process and verify visual output alignment and compute difference metrics across simulator C-Arm frames.
-                        </p>
-                        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">
-                            <span>Python • OpenCV • NumPy • Git</span>
-                            <span style="color: var(--border-color);">|</span>
-                            <span>Status: <strong style="color: var(--success-color);">Completed</strong></span>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Git</span>
                         </div>
                     </div>
                 </summary>
                 <div class="case-study-content">
                     <!-- Metadata Panel -->
-                    <div class="project-metadata-panel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; background: var(--bg-main); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.85rem 1rem; margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 0.8rem;">
+                    <div class="project-metadata-panel">
                         <div>
                             <span class="meta-label">Status</span>
-                            <span class="meta-value" style="color: var(--success-color); font-weight: 600;">Completed</span>
+                            <span class="meta-value">Completed</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Role</span>
+                            <span class="meta-value">QA Intern</span>
+                        </div>
+                        <div>
+                            <span class="meta-label">Duration</span>
+                            <span class="meta-value">3 Weeks</span>
                         </div>
                         <div>
                             <span class="meta-label">Last Updated</span>
-                            <span class="meta-value" style="color: var(--text-main); font-weight: 600;">June 2026</span>
+                            <span class="meta-value">June 2026</span>
                         </div>
                         <div>
                             <span class="meta-label">Repository</span>
-                            <a href="https://github.com/Txwariaditya/CArmImageAnalysis" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); font-weight: 600; text-decoration: none;">Explore Source →</a>
-                        </div>
-                        <div>
-                            <span class="meta-label">Demo</span>
-                            <span class="meta-value" style="color: var(--text-muted); font-weight: 600;">Not Available</span>
+                            <a href="https://github.com/Txwariaditya/CArmImageAnalysis" target="_blank" rel="noopener noreferrer">Explore Source →</a>
                         </div>
                     </div>
 
@@ -413,7 +422,7 @@ Validation Reports Logger</div>
         <div class="container">
             <h2 class="section-title">Learning Roadmap</h2>
             <p class="section-subtitle-description">
-                My learning roadmap is driven by the skills required to build production-ready machine learning systems, progressing from software engineering foundations to cloud infrastructure and MLOps.
+                A structured summary of my immediate focus and technical progression path.
             </p>
             
             <div class="roadmap-grid">
@@ -474,7 +483,7 @@ Validation Reports Logger</div>
                             <i class="fas fa-phone"></i>
                             <div>
                                 <p class="contact-label">Phone</p>
-                                <!-- <a href="tel:+919958864941"> -->+91 99588 64941</a>
+                                +91 8797599640</a>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -500,7 +509,7 @@ Validation Reports Logger</div>
                         <a href="https://github.com/txwariaditya" target="_blank" rel="noopener noreferrer" class="social-link">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="assets/resume.pdf" target="_blank" class="social-link">
+                        <a href="resume.pdf" target="_blank" class="social-link">
                             <i class="fas fa-file-pdf"></i> View Resume
                         </a>
                     </div>
@@ -531,7 +540,7 @@ Validation Reports Logger</div>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container" style="border-top: 1px solid var(--border-color); padding-top: 2rem;">
+        <div class="container"  padding-top: 2rem;">
             <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem; text-align: center;">
                 <h3 style="font-family: var(--font-mono); font-size: 1.1rem; color: var(--primary-color); margin: 0; text-transform: uppercase; letter-spacing: 0.5px;">AdityaLab</h3>
                 <p style="max-width: 650px; color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6;">

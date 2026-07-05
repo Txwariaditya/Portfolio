@@ -69,9 +69,9 @@ body {
 }
 
 .container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 24px;
 }
 
 p {
@@ -167,7 +167,7 @@ p {
 
 /* Hero Section */
 .hero {
-    padding: 160px 0 120px 0;
+    padding: 8rem 0 4rem 0;
     background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
     background-size: 24px 24px;
 }
@@ -214,10 +214,7 @@ p {
 
 .hero-buttons {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -240,7 +237,7 @@ p {
 
 /* Philosophy Section */
 .philosophy {
-    padding: 120px 0;
+    padding: 4rem 0;
     border-top: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
 }
@@ -282,7 +279,7 @@ p {
 
 /* Sections Global */
 section {
-    padding: 120px 0;
+    padding: 4rem 0;
 }
 
 .section-title {
@@ -305,7 +302,7 @@ section {
 
 /* Active Status Section */
 .status-section {
-    padding: 120px 0;
+    padding: 3rem 0;
     background: var(--bg-main);
     border-bottom: 1px solid var(--border-color);
 }
@@ -647,9 +644,9 @@ code {
 
 /* Engineering Journal Section styles */
 .notes-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
     margin-top: 1.5rem;
 }
 
@@ -864,6 +861,11 @@ code {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary-color);
+}
+
+#message {
+    resize: none;
+    min-height: 10px;
 }
 
 /* Footer Section */

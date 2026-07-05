@@ -21,8 +21,7 @@ Portfolio/
 ├── index.html      # Main page structure (Philosophy, Status, Journey, Case Studies, Journal, Roadmap)
 ├── styles.css      # Custom styles matching the Slate/Blue typography system
 ├── script.js       # Mobile navigation, fade-in animations, and form submission
-└── assets/
-    └── resume.pdf  # Downloadable PDF resume
+└── resume.pdf      # Ignore-listed PDF resume (not tracked in Git)
 ```
 
 ---
